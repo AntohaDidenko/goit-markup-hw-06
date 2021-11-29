@@ -140,6 +140,7 @@ img {
   content: "";
   position: absolute;
   bottom: 0;
+  margin-bottom: -1px;
   border-radius: 2px;
   display: block;
   width: 100%;
@@ -154,6 +155,7 @@ img {
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
+  font-weight: 700;
   border: 0;
   height: 50px;
   color: var(--button-color);
@@ -162,13 +164,13 @@ img {
   font-family: inherit;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: color var(--time-animation) var(--time-distribution-function),
-    background-color var(--time-animation) var(--time-distribution-function);
+    box-shadow var(--time-animation) var(--time-distribution-function);
 }
 
 .button:hover,
 .button:focus {
-  color: red;
-  background-color: rosybrown;
+  color: var(--svg-color);
+  box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.15);
 }
 
 .hero {
@@ -535,6 +537,72 @@ img {
   fill: currentColor;
 }
 
+/* Форма подписки */
+
+.form-subscription {
+  display: flex;
+  margin-left: 94px;
+  align-items: flex-end;
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-subscription {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.input-subscription {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.button-subscription {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-text-color);
+  color: #ffffff;
+  margin-left: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  transition: color var(--time-animation) var(--time-distribution-function),
+    box-shadow var(--time-animation) var(--time-distribution-function);
+}
+
+.button-subscription:hover,
+.button-subscription:focus {
+  color: var(--svg-color);
+  box-shadow: inset 2px 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+.button-subscription-svg {
+  background-size: contain;
+  margin-left: 10px;
+  fill: currentColor;
+}
+
 /* Портфолио */
 
 .section-portfolio {
@@ -698,6 +766,9 @@ img {
   height: 528px;
   width: 581px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
   background-color: #fff;
   transition: transform var(--time-animation) var(--time-distribution-function);
 }
@@ -720,4 +791,36 @@ img {
 
 .button-close-svg {
   fill: currentColor;
+}
+
+/* Форма модалки */
+
+.modal-form > p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.modal-form-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-label {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
 }
