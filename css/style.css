@@ -587,13 +587,11 @@ img {
   align-items: center;
   justify-content: center;
   letter-spacing: 0.06em;
-  transition: color var(--time-animation) var(--time-distribution-function),
-    box-shadow var(--time-animation) var(--time-distribution-function);
+  transition: box-shadow var(--time-animation) var(--time-distribution-function);
 }
 
 .button-subscription:hover,
 .button-subscription:focus {
-  color: var(--svg-color);
   box-shadow: inset 2px 6px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -787,10 +785,16 @@ img {
   border-radius: 50%;
   color: #000000;
   cursor: pointer;
+  transition: color var(--time-animation) var(--time-distribution-function);
 }
 
 .button-close-svg {
   fill: currentColor;
+}
+
+.button-close:hover,
+.button-close:focus {
+  color: var(--accent-text-color);
 }
 
 /* Форма модалки */
@@ -842,7 +846,7 @@ img {
   letter-spacing: 0.01em;
   border-radius: 4px;
   padding-left: 42px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--time-animation) var(--time-distribution-function);
 }
 
 .modal-input:hover,
@@ -857,7 +861,7 @@ img {
   left: 12px;
   transform: translateY(-50%);
   fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--time-animation) var(--time-distribution-function);
 }
 
 .modal-input:hover + .form-name-svg,
@@ -876,7 +880,7 @@ img {
   padding: 12px 16px;
   resize: none;
   width: 100%;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--time-animation) var(--time-distribution-function);
 }
 
 .modal-textarea:hover,
@@ -888,8 +892,6 @@ img {
 .div-checkbox {
   margin-top: 20px;
   margin-bottom: 30px;
-  display: flex;
-  align-items: center;
 }
 
 .form-check-mark {
@@ -897,10 +899,26 @@ img {
   border: 2px solid var(--main-text-color);
   border-radius: 2px;
   margin-right: 8px;
+  transition: background-color var(--time-animation)
+      var(--time-distribution-function),
+    border var(--time-animation) var(--time-distribution-function);
 }
 
 .form-checkbox:checked + .form-check-mark {
-  background-color: blue;
+  background-color: var(--accent-text-color);
+  border: transparent;
+  background-origin: border-box;
+}
+
+.modal-consent-text {
+  color: var(--accent-text-color);
+  margin-left: 4px;
+  transition: color var(--time-animation) var(--time-distribution-function);
+}
+
+.modal-consent-text:hover,
+.modal-consent-text:focus {
+  color: #0f5a97;
 }
 
 .modal-consent {
@@ -909,6 +927,8 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
 }
 
 .modal-form-button {
@@ -924,4 +944,11 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  transition: background-color var(--time-animation)
+    var(--time-distribution-function);
+}
+
+.modal-form-button:hover,
+.modal-form-button:focus {
+  background-color: #188ce8;
 }

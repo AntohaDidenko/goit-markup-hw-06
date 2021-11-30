@@ -375,11 +375,13 @@
                     <textarea class="modal-textarea" name="comment" id="comment" cols="" rows="7" placeholder="Введите текст"></textarea>
                 </div>
                 <div class="div-checkbox">
-                    <input type="checkbox" class="visually-hidden form-checkbox" name="consent" id="consent">
-                    <svg class="form-check-mark" width="16" height="15">
-                        <use href="./images/icons.svg#icon-check-mark"></use>
-                    </svg>
-                    <label for="consent" class="modal-consent">Соглашаюсь с рассылкой и принимаю <a href="" class="modal-consent-text">Условия договора</a> </label>
+                    <label class="modal-consent">
+                        <input type="checkbox" class="visually-hidden form-checkbox" name="consent" id="consent">
+                        <svg class="form-check-mark" width="16" height="15">
+                            <use href="./images/icons.svg#icon-check-mark"></use>
+                        </svg>
+                        Соглашаюсь с рассылкой и принимаю <a href="" class="modal-consent-text">Условия договора</a> 
+                    </label>
                 </div>
                 <button type="submit" class="modal-form-button">
                     Отправить
